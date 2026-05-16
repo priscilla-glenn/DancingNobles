@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rules</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top" class="rules-page">
+    <header>
+        <h1>Rules of the Noble Dancing Game</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="selection.html">New Game</a>
+            <a href="gameplay.html">Current Game</a>
+        </nav>
+    </header>
+    <button id="toc-toggle" class="hamburger" aria-label="Open Table of Contents">☰</button>
+    <main>
+        <section id="toc">
+            <div class="toc-header">
+                <h2>Table of Contents</h2>
+                <button id="toc-close" class="toc-close" aria-label="Close Table of Contents">✕</button>
+            </div>
+            <a class="top-link" href="#top">Back to top</a>
+            <ul>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#abilities">Abilities</a></li>
+                <li><a href="#scenarios">Scenarios</a></li>
+                <li><a href="#npcs">NPCs</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+                <li><a href="#events">Events</a></li>
+            </ul>
+        </section>
+        <div id="rules-content-wrapper">
+            <section id="characters">
+                <h2>Characters</h2>
+                <div id="characters-content"></div>
+            </section>
+            <section id="abilities">
+            <h2>Abilities</h2>
+            <div id="abilities-content"></div>
+        </section>
+        <section id="scenarios">
+            <h2>Scenarios</h2>
+            <div id="scenarios-content"></div>
+        </section>
+        <section id="npcs">
+            <h2>NPCs</h2>
+            <div id="npcs-content"></div>
+        </section>
+        <section id="gameplay">
+            <h2>Gameplay</h2>
+            <div id="gameplay-content"></div>
+        </section>
+        <section id="events">
+            <h2>Events</h2>
+            <div id="events-content"></div>
+        </section>
+        </div>
+    </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="popup-body"></div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

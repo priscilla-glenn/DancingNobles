@@ -1,0 +1,744 @@
+/* Noble Dancing Game Styles */
+body {
+    font-family: 'Times New Roman', serif;
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 2px solid gold;
+}
+
+header h1 {
+    margin: 0;
+    color: gold;
+}
+
+nav {
+    margin-top: 0.5rem;
+}
+
+nav a {
+    color: gold;
+    text-decoration: none;
+    margin: 0 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.top-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    color: gold;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.top-link:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+#top-round-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#top-round-bar .top-card {
+    flex: 1 1 320px;
+    background-color: #333;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color: gold;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    .tracker {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .tracker label {
+        width: auto;
+        flex: 0 0 auto;
+    }
+    #agents-cards {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
+button {
+    background-color: gold;
+    color: #333;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d4af37;
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    color: gold;
+    border-bottom: 1px solid gold;
+    padding-bottom: 0.5rem;
+}
+
+.card {
+    background-color: #333;
+    border: 1px solid gold;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.faction-list {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.faction-button {
+    background-color: #222;
+    border: 1px solid gold;
+    color: gold;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.faction-button.selected,
+.faction-button:hover {
+    background-color: gold;
+    color: #111;
+}
+
+.agents-page .faction-prompt,
+.faction-prompt {
+    color: #ddd;
+    padding: 1rem;
+}
+
+#scenarios-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.scenario-card {
+    text-align: left;
+    width: 100%;
+    background-color: #333;
+    border: 1px solid gold;
+    color: #f4f4f4;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.scenario-card:hover,
+.scenario-card.selected {
+    background-color: #444;
+}
+
+.scenario-card h3,
+.scenario-card p {
+    color: #f4f4f4;
+}
+
+.scenario-card .clickable {
+    color: gold;
+}
+
+#rules-content-wrapper {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+body.rules-page main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+body.rules-page #toc {
+    flex: 0 0 220px;
+    position: sticky;
+    top: 1rem;
+    max-height: calc(100vh - 2rem);
+    overflow: auto;
+    padding: 1rem;
+}
+
+body.rules-page #toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+body.rules-page #toc li {
+    margin-bottom: 0.75rem;
+}
+
+body.rules-page #toc a {
+    color: gold;
+    text-decoration: none;
+}
+
+body.rules-page #toc a:hover {
+    text-decoration: underline;
+}
+
+.card p,
+.rule-card p {
+    margin: 0.2rem 0;
+    line-height: 1.35;
+}
+
+.character-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.role-picker {
+    margin-top: 0.75rem;
+}
+
+.role-picker label {
+    margin-right: 0.5rem;
+}
+
+.role-select {
+    width: 100%;
+    max-width: 180px;
+    margin-top: 0.25rem;
+}
+
+.card.leader {
+    border-color: #4ecdc4;
+}
+
+.card.follower {
+    border-color: #ff6b6b;
+}
+
+.card img,
+.rule-card img {
+    width: 120px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    margin-right: 1rem;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: none;
+}
+
+.flavor-text {
+    font-style: italic;
+}
+
+.role-selection {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.role-selection > div {
+    flex: 1 1 300px;
+}
+
+#scenarios-list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.scenario-card {
+    text-align: left;
+    width: 100%;
+}
+
+.card-content {
+    display: block;
+}
+
+.card.selected {
+    border-color: #d4af37;
+    background-color: #444;
+}
+
+.card.disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+.rule-card {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 10px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.rule-card h4 {
+    margin-top: 0;
+}
+
+.faction-subheader {
+    margin: 1.5rem 0 0.75rem;
+    color: gold;
+    border-bottom: 1px solid gold;
+    padding-bottom: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.tracker {
+    display: flex;
+    align-items: center;
+    margin: 0.5rem 0;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.tracker label {
+    width: 120px;
+}
+
+.tracker span {
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+.tracker-controls {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.adjust {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+}
+
+#actions-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.75rem;
+    overflow-x: auto;
+}
+
+#actions-list li {
+    background-color: #333;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid gold;
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+#actions-list li:not(:last-child) {
+    margin: 0;
+}
+
+#initiative-scenario-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+/* Agents cards row layout */
+#agents-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+#agents-cards .card {
+    display: flex;
+    flex: 1 1 260px;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.75rem;
+}
+
+#agents-cards .card .agent-card-inner {
+    flex: 1 1 auto;
+}
+
+.agent-carousel-nav {
+    display: none;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.agent-carousel-nav button {
+    background: gold;
+    border: none;
+    color: #111;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#agents-cards .agent-card-image {
+    width: 120px;
+    height: auto;
+    flex: 0 0 120px;
+}
+
+#initiative,
+#scenario-card {
+    flex: 1 1 360px;
+    min-width: 280px;
+}
+
+#initiative {
+    min-height: 420px;
+}
+
+#initiative button {
+    margin-top: 2rem;
+}
+
+#scenario-card {
+    max-width: 540px;
+}
+
+.agent-card-inner {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.selection-page .agent-card-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.selection-page .agent-card-image {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.character-grid .role-picker {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.tracker {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#top-round-bar {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+#top-round-bar .top-card {
+    flex: 1 1 320px;
+    background-color: #333;
+    border: 1px solid gold;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+#round-event button,
+#round-info button {
+    margin-top: 1rem;
+}
+
+.toc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hamburger {
+    display: none;
+    background: gold;
+    border: none;
+    color: #111;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+body.rules-page main {
+    padding-top: 1rem;
+}
+
+.rules-page #toc-toggle {
+    display: none;
+    position: absolute; /* will be positioned above the Characters heading via JS */
+    z-index: 200;
+    background: gold;
+    border: none;
+    color: #111;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.rules-page #toc-close {
+    display: none;
+    background: transparent;
+    border: none;
+    color: gold;
+    font-size: 1.5rem;
+    padding: 0;
+    cursor: pointer;
+}
+
+body.toc-open #toc-toggle {
+    display: none;
+}
+
+body.toc-open #toc-close {
+    display: inline-block;
+}
+.rules-page #toc-toggle.fixed {
+    position: fixed !important;
+    top: 0.75rem !important;
+    left: 0.75rem !important;
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    .rules-page #toc-toggle {
+        display: inline-block;
+    }
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .tracker {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .agent-carousel-nav {
+        display: flex;
+    }
+    #agents-cards {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        flex-wrap: nowrap;
+    }
+    #agents-cards .card {
+        flex: 0 0 85%;
+        min-width: 260px;
+        max-width: 340px;
+        scroll-snap-align: start;
+    }
+    #initiative-scenario-row {
+        flex-direction: column;
+    }
+    #initiative {
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+    }
+    body.rules-page main {
+        flex-direction: column;
+    }
+    body.rules-page #toc {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 260px;
+        height: 100vh;
+        z-index: 20;
+        overflow-y: auto;
+        transition: left 0.25s ease-in-out;
+        background-color: #222;
+    }
+    body.rules-page #toc.open {
+        left: 0;
+    }
+    body.rules-page #toc ul {
+        padding-left: 0;
+    }
+    body.rules-page .hamburger {
+        display: inline-block;
+    }
+    body.rules-page #rules-content-wrapper {
+        min-width: 0;
+    }
+}
+
+/* Small-phone overrides: button sizing and horizontal agent scrolling */
+@media (max-width: 420px) {
+    .adjust {
+        width: 30px;
+        height: 30px;
+        font-size: 0.95rem;
+        padding: 0;
+    }
+    .tracker label {
+        width: auto;
+        font-size: 0.95rem;
+        margin-right: 0.25rem;
+    }
+    .tracker span {
+        min-width: 36px;
+        text-align: center;
+        font-weight: bold;
+    }
+    #agents-cards {
+        display: flex;
+        gap: 0.75rem;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 0.5rem;
+        scroll-snap-type: x mandatory;
+    }
+    #agents-cards .card {
+        flex: 0 0 85%;
+        min-width: 260px;
+        max-width: 320px;
+        scroll-snap-align: start;
+    }
+    #agents-cards .agent-card-image {
+        width: 96px;
+        flex: 0 0 96px;
+        margin-right: 0.5rem;
+    }
+    #initiative {
+        width: 100%;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.popup-content {
+    background-color: #333;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid gold;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+}
+
+.close {
+    color: gold;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #d4af37;
+}
+
+/* Clickable spans */
+.clickable {
+    color: gold;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.clickable:hover {
+    color: #d4af37;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main {
+        padding: 1rem;
+    }
+    .hero {
+        padding: 2rem 1rem;
+    }
+    .tracker {
+        flex-direction: row;
+        align-items: center;
+    }
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gameplay</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Current Game</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="selection.html">New Game</a>
+            <a href="rules.html">Rules</a>
+        </nav>
+    </header>
+    <main>
+        <section id="top-round-bar">
+            <div id="round-event" class="top-card">
+                <h2>Round Event</h2>
+                <div id="event-display">A new event will appear here.</div>
+                <button id="generate-event">Generate Event</button>
+            </div>
+            <div id="round-info" class="top-card">
+                <h2>Round Information</h2>
+                <div id="current-round">Round 1</div>
+                <div id="game-status"></div>
+                <button id="next-round">Next Round</button>
+            </div>
+            <div id="trackers-card" class="top-card">
+                <h2>Trackers</h2>
+                <div class="tracker">
+                    <label>Hand Size:</label>
+                    <div class="tracker-controls">
+                        <button class="adjust" data-target="hand-size" data-delta="-1">-</button>
+                        <span id="hand-size">5</span>
+                        <button class="adjust" data-target="hand-size" data-delta="1">+</button>
+                    </div>
+                </div>
+                <div class="tracker">
+                    <label>Draw Limit:</label>
+                    <div class="tracker-controls">
+                        <button class="adjust" data-target="draw-limit" data-delta="-1">-</button>
+                        <span id="draw-limit">3</span>
+                        <button class="adjust" data-target="draw-limit" data-delta="1">+</button>
+                    </div>
+                </div>
+                <div class="tracker">
+                    <label>Victory Points:</label>
+                    <div class="tracker-controls">
+                        <button class="adjust" data-target="victory-points" data-delta="-1">-</button>
+                        <span id="victory-points">0</span>
+                        <button class="adjust" data-target="victory-points" data-delta="1">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div id="initiative-scenario-row">
+            <section id="initiative">
+                <h2>Initiative Order</h2>
+                <div id="initiative-list">
+                    <!-- Initiative will be displayed here -->
+                </div>
+                <button id="generate-initiative">Generate Initiative</button>
+            </section>
+            <section id="scenario-card">
+                <h2>Scenario</h2>
+                <div id="scenario-info">
+                    <!-- Scenario details -->
+                </div>
+            </section>
+        </div>
+        <section id="agents">
+            <h2>Your Agents</h2>
+            <div id="agents-cards">
+                <!-- Agent cards will be displayed here -->
+            </div>
+            <div class="agent-carousel-nav">
+                <button id="agent-prev" aria-label="Previous agent">‹</button>
+                <button id="agent-next" aria-label="Next agent">›</button>
+            </div>
+        </section>
+        <section id="actions">
+            <h2>Available Actions</h2>
+            <ul id="actions-list">
+                <!-- Actions will be listed here -->
+            </ul>
+        </section>
+    </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="popup-body"></div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

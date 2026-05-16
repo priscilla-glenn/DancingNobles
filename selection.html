@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Team and Scenario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="selection-page">
+    <header>
+        <h1>Choose Your Team</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="selection.html">New Game</a>
+            <a href="rules.html">Rules</a>
+            <a href="gameplay.html">Current Game</a>
+        </nav>
+    </header>
+    <main>
+        <section id="faction-selection">
+            <h2>Choose Your Faction</h2>
+            <div id="faction-list" class="faction-list">
+                <button type="button" class="faction-button" data-faction="Banking">Banking</button>
+                <button type="button" class="faction-button" data-faction="Knights">Knights</button>
+            </div>
+        </section>
+        <section id="character-selection">
+            <h2>Pick a Leader and a Follower</h2>
+            <div id="character-list" class="character-grid">
+                <p class="faction-prompt">Select a faction to display its characters.</p>
+            </div>
+        </section>
+        <section id="scenario-selection">
+            <h2>Choose Your Scenario</h2>
+            <div id="scenarios-list">
+                <!-- Scenarios will be populated by JS -->
+            </div>
+        </section>
+        <button id="start-btn" disabled>START</button>
+    </main>
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <div id="popup-body"></div>
+        </div>
+    </div>
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
